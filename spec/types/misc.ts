@@ -1,6 +1,5 @@
+import { User } from '@/repos/UserRepo'
 import { Response } from 'supertest'
-
-import { IUser } from '@/models/User'
 
 // Misc
 export type TReqBody = Record<string, unknown>
@@ -11,6 +10,6 @@ export type TApiCb = (res: TRes) => void
 // typescript errors.
 type TBody = {
   [key: string]: unknown
-  user?: IUser
-  users?: IUser[]
+  user?: User
+  users?: User[]
 }
